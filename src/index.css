@@ -45,6 +45,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--awcc-light-gray);
+  justify-content: center;
 }
 
 h1 {
