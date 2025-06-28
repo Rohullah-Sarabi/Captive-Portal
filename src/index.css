@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* AWCC Theme Colors */
+  --awcc-blue: #0056B3;
+  --awcc-dark-blue: #003366;
+  --awcc-light-blue: #0077CC;
+  --awcc-orange: #FF6600;
+  --awcc-yellow: #FFCC00;
+  --awcc-light-gray: #F5F5F5;
+  --awcc-gray: #DDDDDD;
+  --awcc-dark-gray: #666666;
+  --awcc-black: #333333;
+
+  color-scheme: light dark;
+  color: var(--awcc-black);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--awcc-blue);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--awcc-dark-blue);
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--awcc-light-gray);
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: var(--awcc-dark-blue);
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--awcc-blue);
+}
+
+h3 {
+  font-size: 1.5em;
+  color: var(--awcc-blue);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--awcc-orange);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+button:hover {
+  background-color: #E65C00;
+  transform: translateY(-1px);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--awcc-light-blue);
+}
+
+/* Form elements */
+input, select, textarea {
+  border: 1px solid var(--awcc-gray);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  transition: border-color 0.25s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--awcc-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
+/* Cards and containers */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Utility classes */
+.bg-awcc-gradient {
+  background: linear-gradient(to bottom, var(--awcc-blue), var(--awcc-dark-blue));
+}
+
+.text-awcc-blue {
+  color: var(--awcc-blue);
+}
+
+.bg-awcc-orange {
+  background-color: var(--awcc-orange);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #1a1a1a;
+  }
+  a:hover {
+    color: var(--awcc-light-blue);
+  }
+  button {
+    background-color: var(--awcc-dark-blue);
+  }
+  .card {
+    background-color: #2d2d2d;
+  }
+}
